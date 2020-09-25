@@ -1,0 +1,13 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: socket
+  profiles:
+    active: discovery
+  cloud:
+    nacos:
+      config:
+        server-addr: ${NACOS_SERVER}
+        file-extension: yml
+        prefix: cloud

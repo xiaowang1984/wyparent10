@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway
+  profiles:
+    active: discovery,gateway,securety
+  cloud:
+    nacos:
+      config:
+        prefix: cloud
+        file-extension: yml
+        server-addr: ${NACOS_SERVER}
